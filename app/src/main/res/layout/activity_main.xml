@@ -32,6 +32,23 @@
         android:layout_height="wrap_content"
         android:text="@string/display_what_user_enters" />
 
+    <RadioGroup
+        android:id="@+id/RadioGroupGender"
+        style="@style/RadioGroupGender">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/female" />
+    </RadioGroup>
+
     <ToggleButton
         android:id="@+id/toggleButtonEnabled"
         android:layout_width="match_parent"

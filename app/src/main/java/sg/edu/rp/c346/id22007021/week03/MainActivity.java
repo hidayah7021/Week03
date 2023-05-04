@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button buttonDisplay;
     EditText etInput;
     ToggleButton tgButton;
+    RadioGroup rgGender;
 
 
     @Override
@@ -26,12 +28,22 @@ public class MainActivity extends AppCompatActivity {
         buttonDisplay = findViewById(R.id.buttonDisplay);
         etInput = findViewById(R.id.editTextInput);
         tgButton = findViewById(R.id.toggleButtonEnabled);
+        rgGender = findViewById(R.id.RadioGroupGender);
 
         buttonDisplay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Code for the action
                 String stringResponse = etInput.getText().toString();
+                int checkedRadioId = rgGender.getCheckedRadioButtonId();
+                if(checkedRadioId == R.id.radioMale){
+                    // if male; he says ...
+                    stringResponse = "He says " + stringResponse;
+                }
+                else{
+                    // she says ...
+                    stringResponse = "She says " + stringResponse;
+                }
                 tvDisplay.setText(stringResponse);
             }
         });
@@ -49,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
 
     }
 }
