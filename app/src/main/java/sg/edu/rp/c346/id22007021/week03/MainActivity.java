@@ -3,15 +3,18 @@ package sg.edu.rp.c346.id22007021.week03;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
-    // Step 1 ; Declaring Variables
+    // Step 1 ; Declaring Variables, UI to Code
     TextView tvDisplay;
     Button buttonDisplay;
     EditText etInput;
+    ToggleButton tgButton;
 
 
     @Override
@@ -22,5 +25,16 @@ public class MainActivity extends AppCompatActivity {
         tvDisplay = findViewById(R.id.textViewDisplay);
         buttonDisplay = findViewById(R.id.buttonDisplay);
         etInput = findViewById(R.id.editTextInput);
+        tgButton = findViewById(R.id.toggleButtonEnabled);
+
+        buttonDisplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Code for the action
+                String stringResponse = etInput.getText().toString();
+                tvDisplay.setText(stringResponse);
+            }
+        });
+
     }
 }

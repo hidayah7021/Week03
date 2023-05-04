@@ -2,4 +2,6 @@
     <string name="app_name">Week03</string>
     <string name="display">Display</string>
     <string name="display_what_user_enters">Display what user enters</string>
+    <string name="disabled">Disabled</string>
+    <string name="enabled">Enabled</string>
 </resources>
