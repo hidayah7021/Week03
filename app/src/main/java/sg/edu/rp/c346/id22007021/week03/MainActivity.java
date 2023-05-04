@@ -35,6 +35,21 @@ public class MainActivity extends AppCompatActivity {
                 tvDisplay.setText(stringResponse);
             }
         });
+        tgButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // code requirements;
+                // get state of toggle button
+                // enabling and disabling etInput
+                boolean isChecked = tgButton.isChecked();
+                if (isChecked) {
+                    etInput.setEnabled(true);
+                }else{
+                    etInput.setEnabled(false);
+                }
+            }
+        });
+
 
     }
 }
